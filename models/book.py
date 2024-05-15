@@ -1,12 +1,13 @@
-from pydantic import BaseModel
+from pydantic import BaseModel , Field , PositiveFloat , constr , PositiveInt
 from datetime import datetime
-from typing import Annotated
+from typing import Annotated , Optional
 
 class Book(BaseModel):
-    name: str
-    synopsis: str
-    price: float
-    author: str
-    genre: str
-    publication_date: datetime
-    rating: Annotated[int , lambda x : 1 <= x <= 5]
+    name: str = None
+    synopsis: str = None
+    price: float = None
+    author: str = None
+    genre: str = None
+    publication_date: str = None
+    rating: int = 0
+

@@ -1,6 +1,5 @@
 def individual_serializer(book) -> dict:
-    print("individual_serializer")
-    return {
+        return {
         "id": str(book["_id"]),
         "name": str(book["name"]),
         "synopsis": str(book["synopsis"]),
